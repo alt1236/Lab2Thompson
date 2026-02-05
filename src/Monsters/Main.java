@@ -1,47 +1,26 @@
 package Monsters;
 
+
+
 public class Main {
     public static void main(String[] args){
 
-        Monster undead = new Undead();
-        undead.setName("Zombie");
-        undead.setSkin();
-        undead.setAge(104);
-        undead.setSpecialPowers(Special_Powers.STRENGTH);
-        undead.setNumberOfEyes(2);
-        undead.setHealth(56);
+        Monster undead1 = new Undead("Zombie", 104, Skin.DECAYED, 2, 56, Special_Powers.STRENGTH);
+        System.out.println("Undead 1" + " " + undead1.getName() + undead1.getAge());
 
-        Monster undead = new Undead();
-        undead.setName("Ghost");
-        undead.setSkin();
-        undead.setAge(26);
-        undead.setSpecialPowers(Special_Powers.INVISIBILITY);
-        undead.setNumberOfEyes(0);
-        undead.setHealth(87);
+        undead1.Special_Powers();
 
-        Monster beasts = new Beasts();
-        beasts.setName("Dragon");
-        beasts.setSkin();
-        beasts.setAge(2468);
-        beasts.setSpecialPowers(Special_Powers.FIRE_BREATH);
-        undead.setNumberOfEyes(2);
-        undead.setHealth(100);
+        Monster undead2 = new Undead("Ghost", 26, Skin.TRANSLUCENT, 0, 87, Special_Powers.INVISIBILITY);
 
-        Monster giants = new Giants();
-        giants.setName("Troll");
-        giants.setSkin();
-        giants.setAge(1647);
-        giants.setSpecialPowers(Special_Powers.STRENGTH);
-        undead.setNumberOfEyes(3);
-        undead.setHealth(74);
+        Monster beasts1 = new Beasts("Dragon", 2468, Skin.SCALES, 2, 100, Special_Powers.FIRE_BREATH);
 
-        Monster giants = new Giants();
-        giants.setName("Cyclops");
-        giants.setSkin();
-        giants.setAge(3637);
-        giants.setSpecialPowers(Special_Powers.DURABILITY);
-        undead.setNumberOfEyes(1);
-        undead.setHealth(68);
+        Monster giants1 = new Giants("Troll", 1647, Skin.ROUGH, 3, 74, Special_Powers.STRENGTH);
+
+        Monster giants2 = new Giants("Cyclops", 3637, Skin.ROUGH, 1, 68, Special_Powers.DURABILITY
+        );
+
+
+
     }
 
 }

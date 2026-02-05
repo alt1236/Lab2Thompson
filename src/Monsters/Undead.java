@@ -1,9 +1,13 @@
 package Monsters;
 
-public class Undead extends Monster{
+public final class Undead extends Monster{
+
+    public Monster(String name, int age, Skin skin, int eyes, int health, Special_Powers specialPowers){
+        super(name, age, skin, eyes, health, specialPowers);
+    }
 
     @Override
-    public void move(){
-        System.out.println("The monster moves slowly");
+    public void Special_Powers(){
+        System.out.println("dead");
     }
 }

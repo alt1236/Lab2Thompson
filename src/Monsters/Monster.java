@@ -10,7 +10,15 @@ public abstract class Monster {
     private int numberOfEyes;
     private int health;
 
+    public Monster(String name, int age, Skin skin, int eyes, int health, Special_Powers specialPowers) {
+        this.name = name;
+        this.age = age;
+        this.skin = skin;
+        this.numberOfEyes = eyes;
+        this.health = health;
+        this.specialPowers = specialPowers;
 
+    }
 
     //Getters / Setters
     public String getName() {
@@ -63,4 +71,5 @@ public abstract class Monster {
 
     //Abstract Behavior
     public abstract void move();
+    public abstract void Special_Powers();
 }
