@@ -11,12 +11,26 @@ package Monsters;
 
 public final class Beasts extends Monster{
 
-    public Beasts(String name, int age, Skin skin, int eyes, int health){
+    //Unique Undead Characteristics
+    private int ferocityLevel;
+    private double clawSharpness;
+
+    public Beasts(String name, int age, Skin skin, int eyes, int health, int ferocityLevel, double clawSharpness){
         super(name, age, skin, eyes, health);
+        this.ferocityLevel = ferocityLevel;
+        this.clawSharpness = clawSharpness;
+    }
+
+    public int getFerocityLevel(){
+        return ferocityLevel;
+    }
+
+    public double getClawSharpness(){
+        return clawSharpness;
     }
 
     @Override
     public void specialPowers(){
-        System.out.println(getName() + " " + "unleashes fire breath");
+        System.out.println(getName() + " " + "attacks with ferocity level:" + " " + ferocityLevel);
     }
 }

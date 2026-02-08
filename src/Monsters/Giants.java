@@ -11,12 +11,26 @@ package Monsters;
 
 public final class Giants extends Monster{
 
-    public Giants(String name, int age, Skin skin, int eyes, int health){
+    //Unique Undead Characteristics
+    private double height;
+    private int strengthRating;
+
+    public Giants(String name, int age, Skin skin, int eyes, int health, double height, int strengthRating){
         super(name, age, skin, eyes, health);
+        this.height = height;
+        this.strengthRating = strengthRating;
+    }
+
+    public double getHeight(){
+        return height;
+    }
+
+    public int getStrengthRating(){
+        return strengthRating;
     }
 
     @Override
     public void specialPowers(){
-        System.out.println(getName() + " " + "crushes enemies with colossal strength");
+        System.out.println(getName() + " " + "crushes enemies with colossal strength:" + " " + strengthRating);
     }
 }

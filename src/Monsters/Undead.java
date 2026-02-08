@@ -11,12 +11,26 @@ package Monsters;
 
 public final class Undead extends Monster{
 
-    public Undead(String name, int age, Skin skin, int eyes, int health){
+    //Unique Undead Characteristics
+    private int decayLevel;
+    private boolean regenerates;
+
+    public Undead(String name, int age, Skin skin, int eyes, int health, int decayLevel, boolean regenerates){
         super(name, age, skin, eyes, health);
+        this.decayLevel = decayLevel;
+        this.regenerates = regenerates;
+    }
+
+    public int getDecayLevel(){
+        return decayLevel;
+    }
+
+    public boolean canRegenerate(){
+        return regenerates;
     }
 
     @Override
     public void specialPowers(){
-        System.out.println(getName() + " " + "regenerates from the dead");
+        System.out.println(getName() + " " + "regenerates despite decay level:" + " " + decayLevel);
     }
 }
