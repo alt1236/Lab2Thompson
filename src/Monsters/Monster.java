@@ -4,20 +4,17 @@ public abstract class Monster {
 
     //Class Variables
     private String name;
-    private Special_Powers specialPowers;
     private Skin skin;
     private int age;
     private int numberOfEyes;
     private int health;
 
-    public Monster(String name, int age, Skin skin, int eyes, int health, Special_Powers specialPowers) {
+    public Monster(String name, int age, Skin skin, int eyes, int health) {
         this.name = name;
         this.age = age;
         this.skin = skin;
         this.numberOfEyes = eyes;
         this.health = health;
-        this.specialPowers = specialPowers;
-
     }
 
     //Getters / Setters
@@ -27,14 +24,6 @@ public abstract class Monster {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Special_Powers getSpecialPowers() {
-        return specialPowers;
-    }
-
-    public void setSpecialPowers(Special_Powers specialPowers) {
-        this.specialPowers = specialPowers;
     }
 
     public Skin getSkin() {

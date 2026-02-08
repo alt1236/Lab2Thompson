@@ -2,8 +2,8 @@ package Monsters;
 
 public class Giants extends Monster{
 
-    public Monster(String name, int age, Skin skin, int eyes, int health, Special_Powers specialPowers){
-        super(name, age, skin, eyes, health, specialPowers);
+    public Monster(String name, int age, Skin skin, int eyes, int health){
+        super(name, age, skin, eyes, health);
     }
 
     @Override
