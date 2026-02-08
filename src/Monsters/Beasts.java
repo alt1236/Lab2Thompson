@@ -1,13 +1,22 @@
+/** Project: Lab2
+ * Purpose Details: Defines Beasts monster type
+ * Course: IST 242
+ * Author: Alyssa Thompson
+ * Date Developed: 2/4/26
+ * Last Date Changed:2/8/26
+ * Rev:4
+ */
+
 package Monsters;
 
-public class Beasts extends Monster{
+public final class Beasts extends Monster{
 
-    public Monster(String name, int age, Skin skin, int eyes, int health){
+    public Beasts(String name, int age, Skin skin, int eyes, int health){
         super(name, age, skin, eyes, health);
     }
 
     @Override
-    public void Special_Powers(){
-        System.out.println("dead");
+    public void specialPowers(){
+        System.out.println(getName() + " " + "unleashes fire breath");
     }
 }
